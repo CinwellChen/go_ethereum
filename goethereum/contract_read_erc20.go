@@ -23,10 +23,10 @@ import (
 			abigen --abi=erc20_sol_ERC20.abi --pkg=token --out=erc20.go
 
 		将新的_token_包导入我们的应用程序
-		1、将文件放到C:\Program Files\Go\src\contracts_erc20目录下
+		1、将文件放到C:\Program Files\Go\src\erc20目录下
 		2、将文件上传到github，类似上面导入的写法"github.com/youname/project/contracts_erc20"
 	*/
-	token "contracts_erc20" // for demo (用1的方法，放到go的目录下)
+	token "github.com/youname/project/contracts_erc20" // for demo (用1的方法，放到go的目录下)
 )
 
 // 账户代币余额
