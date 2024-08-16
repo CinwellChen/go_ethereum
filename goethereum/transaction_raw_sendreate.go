@@ -14,13 +14,13 @@ import (
 //发送原始交易事务
 
 func main() {
-	client, err := ethclient.Dial("https://holesky.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	//首先将原始事务十六进制解码为字节格式。
-	rawTx := "f864808374008d825208944592d8f8d7b001e72cb26a73e4fa1806a51ac79d01808284f3a0a23eea5227722607b9968415e938f975d86fd9ae4ceceee4445ad14a0c875322a06c78e68b42c4c1d6dbe428086e894ba9924a19c0a2f68d100eabb0848b83e40c"
+	rawTx := "f8683e8503a3331a2d825208944592d8f8d7b001e72cb26a73e4fa1806a51ac79d01808401546d71a0eb333683a779ce4f462ca556195b29df04f4b437e2f91ad0056583835554a91aa03c999fe1e540d942391e6a1349ccb70ccea4698afe40120b2cb3af935c684b2f"
 
 	rawTxBytes, err := hex.DecodeString(rawTx)
 

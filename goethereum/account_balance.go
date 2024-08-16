@@ -14,13 +14,13 @@ import (
 //账户的余额
 
 func main() {
-	client, err := ethclient.Dial("https://holesky.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	//读取一个账户的余额调用客户端的 BalanceAt 方法，给它传递账户地址和可选的区块号。将区块号设置为 nil 将返回最新的余额。
-	account := common.HexToAddress("0x96216849c49358B10257cb55b28eA603c874b05E")
+	account := common.HexToAddress("0x6924FC5a2b1F438e1D7C2e0024A00c011f9bBb30")
 	balance, err := client.BalanceAt(context.Background(), account, nil)
 	if err != nil {
 		log.Fatal(err)
@@ -28,9 +28,9 @@ func main() {
 	fmt.Println(balance) // 25893180161173005034
 
 	//传区块号能读取该区块时的账户余额。区块号必须是 big.Int 类型。
-	//blockNumber := big.NewInt(5532993)
-	header, err := client.HeaderByNumber(context.Background(), nil)
-	blockNumber := big.NewInt(header.Number.Int64())
+	blockNumber := big.NewInt(5532993)
+	//header, err := client.HeaderByNumber(context.Background(), nil)
+	//blockNumber := big.NewInt(header.Number.Int64())
 	balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
 	if err != nil {
 		log.Fatal(err)

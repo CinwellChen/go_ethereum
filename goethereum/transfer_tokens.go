@@ -19,7 +19,7 @@ import (
 // 代币的转账
 func main() {
 	//连接客户端
-	client, err := ethclient.Dial("https://holesky.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
 	if err != nil {
 		log.Fatal(err)
 	}

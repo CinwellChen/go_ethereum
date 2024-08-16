@@ -18,11 +18,13 @@ import (
 //构建原始交易（Raw Transaction）
 
 func main() {
-	client, err := ethclient.Dial("https://holesky.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	//0x96216849c49358B10257cb55b28eA603c874b05E
+	//fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19
 	privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
 	if err != nil {
 		log.Fatal(err)
@@ -46,7 +48,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("", gasPrice.Int64()) // f86...772
 
 	toAddress := common.HexToAddress("0x4592d8f8d7b001e72cb26a73e4fa1806a51ac79d")
 

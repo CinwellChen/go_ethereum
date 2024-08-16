@@ -13,7 +13,7 @@ import (
 // 设置订阅以便在新区块被开采时获取事件
 func main() {
 	//首先，我们需要一个支持 websocket RPC 的以太坊服务提供者。
-	client, err := ethclient.Dial("wss://holesky.infura.io/ws/v3/b33bf7f45ab84ffcb357517d3b433ca4")
+	client, err := ethclient.Dial("wss://sepolia.infura.io/ws/v3/b33bf7f45ab84ffcb357517d3b433ca4")
 	if err != nil {
 		log.Fatal(err)
 	}

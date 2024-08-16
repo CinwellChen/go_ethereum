@@ -17,12 +17,14 @@ import (
 
 func main() {
 	//连接了客户端
-	client, err := ethclient.Dial("https://holesky.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/b33bf7f45ab84ffcb357517d3b433ca4")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	//下一步就是加载私钥。
+	//
+	//
 	privateKey, err := crypto.HexToECDSA("fad9c8855b740a0b7ed4c221dbad0f33a83a49cad6b3fe8d5817ac83d38b6a19")
 	if err != nil {
 		log.Fatal(err)
