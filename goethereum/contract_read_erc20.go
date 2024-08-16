@@ -26,7 +26,7 @@ import (
 		1、将文件放到C:\Program Files\Go\src\erc20目录下
 		2、将文件上传到github，类似上面导入的写法"github.com/youname/project/contracts_erc20"
 	*/
-	token "github.com/CinwellChen/go_ethereum/go_ethereum/contracts/erc20" // for demo (用2的方法，放到go的目录下)
+	token "github.com/CinwellChen/go_ethereum" // for demo (用2的方法，放到go的目录下)
 )
 
 // 账户代币余额
