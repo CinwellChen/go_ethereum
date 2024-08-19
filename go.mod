@@ -1,4 +1,4 @@
-module goethereum
+module go_ethereum
 
 go 1.22.5
 

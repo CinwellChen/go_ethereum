@@ -28,9 +28,9 @@ func main() {
 	fmt.Println(balance) // 25893180161173005034
 
 	//传区块号能读取该区块时的账户余额。区块号必须是 big.Int 类型。
-	blockNumber := big.NewInt(5532993)
-	//header, err := client.HeaderByNumber(context.Background(), nil)
-	//blockNumber := big.NewInt(header.Number.Int64())
+	//blockNumber := big.NewInt(5532993)
+	header, err := client.HeaderByNumber(context.Background(), nil)
+	blockNumber := big.NewInt(header.Number.Int64())
 	balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
 	if err != nil {
 		log.Fatal(err)
